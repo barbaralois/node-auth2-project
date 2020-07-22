@@ -13,7 +13,7 @@ function find() {
 
 function findBy(filter) {
   return db('users')
-    .where('department', filter)
+    .where(filter)
     .select('id', 'username', 'password', 'department')
     .orderBy('id');
 }
